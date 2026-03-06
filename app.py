@@ -3,7 +3,7 @@ import pandas as pd
 import os
 from src.predict import train_model, predict_price
 
-st.title("💰 Product Price Estimator")
+st.title(" Product Price Estimator")
 
 category = st.selectbox("Category", ['Electronics', 'Furniture', 'Apparel', 'Kitchen', 'Toys'])
 brand = st.selectbox("Brand", ['BrandA', 'BrandB', 'BrandC', 'BrandD', 'BrandE'])
@@ -25,6 +25,6 @@ user_input = {
 
 if st.button("Predict Price"):
     score = train_model()
-    st.success(f"📈 Model Score: {score}")
+    st.success(f" Model Score: {score}")
     price = predict_price(user_input)
-    st.success(f"💵 Estimated Price: ₹{price}")
+    st.success(f" Estimated Price: ₹{price}")
